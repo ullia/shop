@@ -11,7 +11,7 @@
   {
     "id": 1,
     "src": "/assets/images/item-02.png",
-    "name": "",
+    "name": "라켓02",
     "priceText": "권장소비자가 대비",
     "price1": 200000,
     "price2": 185000,
@@ -20,7 +20,7 @@
   {
     "id": 2,
     "src": "/assets/images/item-03.png",
-    "name": "",
+    "name": "라켓03",
     "priceText": "권장소비자가 대비",
     "price1": 200000,
     "price2": 185000,

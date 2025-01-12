@@ -1,17 +1,9 @@
 import React from "react";
-import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Routes, Route, Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import itemRacketData from "../../services/itemRacketData.json";
+import { Link } from "react-router-dom";
 import Item from "../../components/item.js";
-import Detail from "./detail.js";
 
-const Store = () => {
-  const [racketItems, setRacketItems] = useState(itemRacketData);
-  const racketData = JSON.stringify(racketItems, null, 2);
-  console.log(racketItems);
-
+const Store = ({ racketItems }) => {
   return (
     <>
       <div className="main-bg"></div>
@@ -19,20 +11,17 @@ const Store = () => {
       <Container>
         <Row>
           {racketItems.map((data, idx) => {
+            console.log(data.id);
             return (
-              <Col>
-                <Item as={Link} to="/detail" data={data} index={idx} />
+              <Col key={data.id}>
+                <Link to={`/detail/${data.id}`}>
+                  <Item data={data} index={idx} />
+                </Link>
               </Col>
             );
           })}
         </Row>
       </Container>
-
-      <Link to="/detail">디테일 페이지</Link>
-
-      <Routes>
-        <Route path="/detail" element={<Detail />} />
-      </Routes>
     </>
   );
 };
