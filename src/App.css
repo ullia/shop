@@ -38,8 +38,28 @@
 }
 
 .main-bg {
-  background-image: url("background.jpg");
+  background-image: url("./assets/images/main-bg.gif");
   background-size: cover;
-  background-position: center;
-  height: 100vh;
+  background-position: top center;
+  width: 100%;
+  height: 80vh;
+}
+
+.item {
+  width: 200px;
+  height: auto;
+  background-color: #f8312f;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.item .item-img img {
+  width: 100%;
+  height: 100%;
 }
